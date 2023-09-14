@@ -12,9 +12,9 @@ export const MainPage = () => (
     <VStack spacing={4}>
         <PresentationCard/>
         <HStack>
-            <DisplayCard/>
-            <DisplayCard/>
-            <DisplayCard/>
+            <DisplayCard header="placeHolder" bodyHeader="placeHolder" bodyContent="placeHolder"/>
+            <DisplayCard header="placeHolder" bodyHeader="placeHolder" bodyContent="placeHolder"/>
+            <DisplayCard header="placeHolder" bodyHeader="placeHolder" bodyContent="placeHolder"/>
         </HStack>
     </VStack>
 )

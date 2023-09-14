@@ -7,18 +7,24 @@ import {
   CardHeader, 
 } from "@chakra-ui/react"
 
-export const DisplayCard  = () => {
+type DisplayCardProps = {
+  header?: string,
+  bodyHeader?: string,
+  bodyContent?: string
+}
+
+export const DisplayCard : React.FC<DisplayCardProps> = (props) => {
   return (
     <Card>
         <CardHeader>
-            <Heading size='md'>Place Holder</Heading>
+            <Heading size='md'>{props.header}</Heading>
         </CardHeader>
         <CardBody>
             <Heading size='xs' textTransform='uppercase'>
-            Place Holder
+            {props.bodyHeader}
             </Heading>
             <Text pt='2' fontSize='sm'>
-            Place Holder
+            {props.bodyContent}
             </Text>
         </CardBody>
     </Card>
