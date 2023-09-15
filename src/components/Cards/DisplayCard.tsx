@@ -8,25 +8,33 @@ import {
 } from "@chakra-ui/react"
 
 type DisplayCardProps = {
-  header?: string,
+  header: string,
   bodyHeader?: string,
-  bodyContent?: string
+  bodyContent: string[]
 }
 
-export const DisplayCard : React.FC<DisplayCardProps> = (props) => {
-  return (
-    <Card>
+
+// Easiest way to declare a Function Component; return type is inferred.
+export const DisplayCard = ({ header,bodyHeader,bodyContent}: DisplayCardProps) => 
+    <Card variant={"displayCard"}>
         <CardHeader>
-            <Heading size='md'>{props.header}</Heading>
+            <Heading size='md'>
+                {header}  
+            </Heading>
         </CardHeader>
         <CardBody>
             <Heading size='xs' textTransform='uppercase'>
-            {props.bodyHeader}
+              {bodyHeader}
             </Heading>
-            <Text pt='2' fontSize='sm'>
-            {props.bodyContent}
-            </Text>
+            {/* Maybe there is a better wayto do this... */}
+            {bodyContent.map((element, index) => (
+              <> 
+                <Text key={index} pt='2' fontSize='sm'>
+                  {element}
+                </Text>
+                <br />
+               </>
+             ))}
         </CardBody>
     </Card>
-  )
-}
+    ;

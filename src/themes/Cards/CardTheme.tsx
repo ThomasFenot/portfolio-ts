@@ -29,7 +29,7 @@ const baseStyle = definePartsStyle({
 const sizes = {
   md: definePartsStyle({
     container: {
-      borderRadius: "1em"
+      borderRadius: "0.5em"
     }
   }),
   // define custom styles for xl size
@@ -44,11 +44,14 @@ const sizes = {
 
 // define custom variant
   const variants = {
-  portfolio: definePartsStyle({
+  presentationCard: definePartsStyle({
     container: {
-      borderColor: "#459cc6",
-      borderWidth: "3px",
-      color: "chakra-body-text"
+    }
+  }),
+  displayCard: definePartsStyle({
+    container: {
+      minWidth: "14.7em",
+      minHeight: "14.5em",
     }
   }),
   testing: definePartsStyle({
@@ -68,6 +71,5 @@ export const cardTheme = defineMultiStyleConfig({
   variants,
   defaultProps: {
     // define which size and variant is applied by default
-    variant: "portfolio"
   },
 });

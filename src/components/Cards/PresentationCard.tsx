@@ -16,7 +16,7 @@ export const PresentationCard  = () => {
     <Card
         direction={{ base: 'column', sm: 'row' }}
         overflow='hidden'
-        variant='outline'
+        variant='presentationCard'
     >
     <Image
         objectFit='cover'
