@@ -4,18 +4,22 @@ import {
   Text,
   Heading,
   CardBody,
-  CardHeader, 
+  CardHeader,
+  Stack, 
+  StackDivider,
+  Box
 } from "@chakra-ui/react"
+
+import {ProfessionalExpereience} from "../../classes/professionalExperience"
 
 type DisplayCardProps = {
   header: string,
-  bodyHeader?: string,
-  bodyContent: string[]
+  content: ProfessionalExpereience[]
 }
 
 
 // Easiest way to declare a Function Component; return type is inferred.
-export const DisplayCard = ({ header,bodyHeader,bodyContent}: DisplayCardProps) => 
+export const DisplayCard = ({ header,content}: DisplayCardProps) => 
     <Card variant={"displayCard"}>
         <CardHeader>
             <Heading size='md'>
@@ -23,18 +27,24 @@ export const DisplayCard = ({ header,bodyHeader,bodyContent}: DisplayCardProps) 
             </Heading>
         </CardHeader>
         <CardBody>
-            <Heading size='xs' textTransform='uppercase'>
-              {bodyHeader}
-            </Heading>
+            <Stack divider={<StackDivider />} spacing='4'>
             {/* Maybe there is a better wayto do this... */}
-            {bodyContent.map((element, index) => (
-              <> 
-                <Text key={index} pt='2' fontSize='sm'>
-                  {element}
-                </Text>
-                <br />
-               </>
-             ))}
+            {content.map((element, index) => ( 
+              <Box>
+                <Heading size='xs' textTransform='uppercase'>
+                  {element.compagnieName + " - " + element.date}
+                </Heading>
+                {element.details.map((element, index) => ( 
+                  <>
+                    <Text key={index} pt='2' fontSize='sm'>
+                        {element.detailText}
+                    </Text> 
+                    <br />
+                  </>
+                ))}
+              </Box>
+              ))}
+             </Stack>
         </CardBody>
     </Card>
     ;
