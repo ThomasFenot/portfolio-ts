@@ -1,17 +1,13 @@
 import {
   ChakraProvider,
   Box,
-  VStack,
   Grid,
 } from "@chakra-ui/react"
 
 import { MainPage } from "../views/MainPage"
 import { ColorModeSwitcher } from "../components/ColorModeSwitcher"
 
-
-
 import theme from '../themes/Theme';
-
 
 export const App = () => (
   <ChakraProvider theme={theme}>

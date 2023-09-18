@@ -5,21 +5,20 @@ HStack,
 
 import { PresentationCard} from "../components/Cards/PresentationCard"
 import { DisplayCard } from "../components/Cards/DisplayCard"
-import { ProfessionalExpereience, ProfessionalExpereienceDetail } from "../classes/professionalExperience"
+import { ProfessionalExperience, ProfessionalExperienceDetail} from "../classes/professionalExperience"
 
-const listOfProfessionalExperience: ProfessionalExpereience[] = [
-    new ProfessionalExpereience("Proxiad Axe Seine", "October 2017 - December 2022", 
+const listOfProfessionalExperience: ProfessionalExperience[] = [
+    new ProfessionalExperience("Proxiad Axe Seine", "October 2017 - December 2022", 
         [
-            new ProfessionalExpereienceDetail("detailTitle1", "detailContent1"),
-            new ProfessionalExpereienceDetail("detailTitle2", "detailContent2")
+            new ProfessionalExperienceDetail("detailTitle1", "detailContent1"),
+            new ProfessionalExperienceDetail("detailTitle2", "detailContent2")
         ]
     ),
-    new ProfessionalExpereience("Abysse Corp", "October 2022 - Today", 
+    new ProfessionalExperience("Abysse Corp", "October 2022 - Today", 
     [
-        new ProfessionalExpereienceDetail("detailTitle1", "detailContent1"),
-        new ProfessionalExpereienceDetail("detailTitle2", "detailContent2"),
-        new ProfessionalExpereienceDetail("detailTitle3", "detailContent3"),
-
+        new ProfessionalExperienceDetail("detailTitle1", "detailContent1"),
+        new ProfessionalExperienceDetail("detailTitle2", "detailContent2"),
+        new ProfessionalExperienceDetail("detailTitle3", "detailContent3"),
     ]
 )
 ]

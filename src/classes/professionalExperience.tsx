@@ -1,16 +1,16 @@
-class ProfessionalExpereience {
+class ProfessionalExperience {
 compagnieName: string;
 date: string;
-details: ProfessionalExpereienceDetail[]
+details: ProfessionalExperienceDetail[]
 
-    constructor(compagnieName: string, date: string, details: ProfessionalExpereienceDetail[]) {
+    constructor(compagnieName: string, date: string, details: ProfessionalExperienceDetail[]) {
         this.compagnieName = compagnieName;
         this.date = date;
         this.details = details;
     }
 }
 
-class ProfessionalExpereienceDetail {
+class ProfessionalExperienceDetail {
     detailTitle: string;
     detailText: string;
 
@@ -21,4 +21,4 @@ class ProfessionalExpereienceDetail {
     }
   }
   
-  export{ProfessionalExpereience, ProfessionalExpereienceDetail}
+  export{ProfessionalExperience, ProfessionalExperienceDetail}

@@ -10,11 +10,11 @@ import {
   Box
 } from "@chakra-ui/react"
 
-import {ProfessionalExpereience} from "../../classes/professionalExperience"
+import {ProfessionalExperience} from "../../classes/professionalExperience"
 
 type DisplayCardProps = {
   header: string,
-  content: ProfessionalExpereience[]
+  content: ProfessionalExperience[]
 }
 
 
