@@ -51,7 +51,7 @@ const sizes = {
   displayCard: definePartsStyle({
     container: {
       minWidth: "14.7em",
-      minHeight: "14.5em",
+      minHeight: "24em",
     }
   }),
   testing: definePartsStyle({

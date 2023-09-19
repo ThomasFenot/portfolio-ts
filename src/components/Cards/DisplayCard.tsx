@@ -10,11 +10,11 @@ import {
   Box
 } from "@chakra-ui/react"
 
-import {ProfessionalExperience} from "../../classes/professionalExperience"
+import {CardContent} from "../../classes/cardContent"
 
 type DisplayCardProps = {
   header: string,
-  content: ProfessionalExperience[]
+  content: CardContent[]
 }
 
 
@@ -32,8 +32,9 @@ export const DisplayCard = ({ header,content}: DisplayCardProps) =>
             {content.map((element, index) => ( 
               <Box>
                 <Heading size='xs' textTransform='uppercase'>
-                  {element.compagnieName + " - " + element.date}
+                  {element.compagnieName}
                 </Heading>
+                <Text fontSize='sm'>{element.date}</Text>
                 {element.details.map((element, index) => ( 
                   <>
                     <Text key={index} pt='2' fontSize='sm'>

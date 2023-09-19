@@ -5,33 +5,68 @@ HStack,
 
 import { PresentationCard} from "../components/Cards/PresentationCard"
 import { DisplayCard } from "../components/Cards/DisplayCard"
-import { ProfessionalExperience, ProfessionalExperienceDetail} from "../classes/professionalExperience"
+import { CardContent, CardDetail} from "../classes/cardContent"
 
-const listOfProfessionalExperience: ProfessionalExperience[] = [
-    new ProfessionalExperience("Proxiad Axe Seine", "October 2017 - December 2022", 
+//Professional Exp : Maybe i can set this somewhere else ? 
+const listOfProfessionalExperience: CardContent[] = [
+    new CardContent("Abysse Corp",
         [
-            new ProfessionalExperienceDetail("detailTitle1", "detailContent1"),
-            new ProfessionalExperienceDetail("detailTitle2", "detailContent2")
+            new CardDetail("detailContent1", "detailTitle1"),
+            new CardDetail("detailContent2", "detailTitle2"),
+            new CardDetail("detailContent3", "detailTitle3")
+        ], "December 2022 - Today"
+    ),
+    new CardContent("Proxiad Axe Seine", 
+        [
+            new CardDetail("detailContent1", "detailTitle1"),
+            new CardDetail("detailContent2", "detailTitle2")
+        ], "October 2017 - December 2022"
+    )
+]
+
+//List of skills : Maybe i can set this somewhere else ? 
+const listOfSkills: CardContent[] = [
+    new CardContent("Back-end",
+        [
+            new CardDetail("detailContent1", "detailTitle1"),
+            new CardDetail("detailContent2", "detailTitle2"),
+            new CardDetail("detailContent3", "detailTitle3")
+        ], 
+    ),
+    new CardContent("Front-end",
+        [
+            new CardDetail("detailContent1", "detailTitle1"),
+            new CardDetail("detailContent2", "detailTitle2")
+        ]
+    )
+]
+
+//List of socials : Maybe i can set this somewhere else ? 
+const listOfSocials: CardContent[] = [
+    new CardContent("GitHub",
+        [
+            new CardDetail("https://github.fenot.dev")
         ]
     ),
-    new ProfessionalExperience("Abysse Corp", "October 2022 - Today", 
+    new CardContent("LinkedIn",
+        [
+            new CardDetail("https://linkedin.fenot.dev")
+        ]
+    ),
+    new CardContent("RemoteOk",
     [
-        new ProfessionalExperienceDetail("detailTitle1", "detailContent1"),
-        new ProfessionalExperienceDetail("detailTitle2", "detailContent2"),
-        new ProfessionalExperienceDetail("detailTitle3", "detailContent3"),
+        new CardDetail("https://remoteok.fenot.dev")
     ]
 )
 ]
-const listOfSkills: string[] = ['placeHolder1','placeHolder2','placeHolder3']
-const listOfSocials: string[] = ['placeHolder1','placeHolder2','placeHolder3']
 
 export const MainPage = () => (
     <VStack spacing={4}>
         <PresentationCard/>
         <HStack>
             <DisplayCard header="Professional experience" content={listOfProfessionalExperience}/>
-            <DisplayCard header="Skills" content={listOfProfessionalExperience}/>
-            <DisplayCard header="Socials" content={listOfProfessionalExperience}/>
+            <DisplayCard header="Skills" content={listOfSkills}/>
+            <DisplayCard header="Socials" content={listOfSocials}/>
         </HStack>
     </VStack>
 )
