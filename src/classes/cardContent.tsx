@@ -1,18 +1,18 @@
 class CardContent {
-  compagnieName: string;
+  cardContentName: string;
   details: CardDetail[];
   date?: string;
-  constructor(compagnieName: string, details: CardDetail[], date?: string) {
-      this.compagnieName = compagnieName;
+  constructor(cardContentName: string, details: CardDetail[], date?: string) {
+      this.cardContentName = cardContentName;
       this.date = date;
       this.details = details;
   }
 }
 
 class CardDetail {
-  detailText: string;
+  detailText: string[];
   detailTitle?: string;
-  constructor( detailText: string, detailTitle?: string) {
+  constructor(detailText:  string[], detailTitle?: string) {
     this.detailTitle = detailTitle;
     this.detailText = detailText;
   }
