@@ -11,15 +11,27 @@ import { CardContent, CardDetail} from "../classes/cardContent"
 const listOfProfessionalExperience: CardContent[] = [
     new CardContent("Abysse Corp",
         [
-            new CardDetail(["ACdetailContent1"], "ACdetailTitle1"),
-            new CardDetail(["ACdetailContent2"], "ACdetailTitle2"),
-            new CardDetail(["ACdetailContent3"], "ACdetailTitle3")
+            new CardDetail(
+                [
+                    "Implementation of a new ERP (NetSuite)",
+                    "Maintenance and overhaul of legacy applications",
+                    "Creation of a PIM from scratch in React.js",
+                    "Development of a complete .NET API with DDD",
+                ]
+           ),
         ], "December 2022 - Today"
     ),
     new CardContent("Proxiad Axe Seine", 
         [
-            new CardDetail(["PASdetailContent1"], "PASdetailTitle1"),
-            new CardDetail(["PASdetailContent2"], "PASdetailTitle2")
+             new CardDetail(
+                [
+                    "Completion of projects in .NET Framework and .NET Core",
+                    "Execution of a Unity 3D project and 3D object modeling",
+                    "Implementation of a project in Vue.js",
+                    "Migration of a Razor project to React.js",
+                    "Creation of APIs in .NET Core"
+                ]
+           ),
         ], "October 2017 - December 2022"
     )
 ]
@@ -28,15 +40,19 @@ const listOfProfessionalExperience: CardContent[] = [
 const listOfSkills: CardContent[] = [
     new CardContent("Back-end",
         [
-            new CardDetail(["C#","JavaScript","TypeScript","SQL","Razor"], "Languages"),
-            new CardDetail([".NET Core/.NET Framework","React.JS","ASP.NET MVC","React.JS", "Blazor" ], "Frameworks"),
-            new CardDetail(["SSMS", "VS/VS Code","Docker"], "Tools")
-        ], 
+            new CardDetail(["C#","JavaScript","TypeScript","SQL",""], "Languages"),
+            new CardDetail([".NET Core/.NET Framework", "Entity Framework"], "Frameworks"),
+        ]
     ),
     new CardContent("Front-end",
         [
-            new CardDetail(["FEdetailContent1"], "FEdetailTitle1"),
-            new CardDetail(["FEdetailContent2"], "FEdetailTitle2")
+            new CardDetail(["Razor"], "Languages"),
+            new CardDetail(["ASP.NET MVC","React.JS","Blazor",], "Frameworks"),
+        ]
+    ),
+    new CardContent("Tools",
+        [
+            new CardDetail(["SSMS", "VS/VS Code","Docker"]),
         ]
     )
 ]
@@ -64,9 +80,9 @@ export const MainPage = () => (
     <VStack spacing={4}>
         <PresentationCard/>
         <HStack>
-            <DisplayCard header="Professional experience" content={listOfProfessionalExperience}/>
-            <DisplayCard header="Skills" content={listOfSkills}/>
-            <DisplayCard header="Socials" content={listOfSocials}/>
+            <DisplayCard header="Professional experience" content={listOfProfessionalExperience} isCardWithLink={false}/>
+            <DisplayCard header="Skills" content={listOfSkills} isCardWithLink={false}/>
+            <DisplayCard header="Socials" content={listOfSocials} isCardWithLink={true}/>
         </HStack>
     </VStack>
 )

@@ -8,6 +8,7 @@ import {
   Stack,
   StackDivider,
   Box,
+  Link,
 } from "@chakra-ui/react";
 
 import { CardContent } from "../../classes/cardContent";
@@ -15,9 +16,10 @@ import { CardContent } from "../../classes/cardContent";
 type DisplayCardProps = {
   header: string;
   content: CardContent[];
+  isCardWithLink: boolean;
 };
 
-export const DisplayCard = ({ header, content }: DisplayCardProps) => (
+export const DisplayCard = ({ header, content, isCardWithLink =false }: DisplayCardProps) => (
   <Card variant={"displayCard"}>
     <CardHeader>
       <Heading size="md">{header}</Heading>
@@ -30,16 +32,20 @@ export const DisplayCard = ({ header, content }: DisplayCardProps) => (
             <Heading size="xs" textTransform="uppercase">
               {element.cardContentName}
             </Heading>
-            <Text fontSize="sm">{element.date}</Text>
+            <Text as='u' fontSize="sm">{element.date}</Text>
             {element.details.map((element, index) => (
               <>
-                <Text key={index} pt="2" fontSize="md">
+                <Text as='u' key={index} pt="2" fontSize="md">
                   {element.detailTitle}
                 </Text>
                 {element.detailText.map((element) => (
-                  <Text key={index} pt="2" fontSize="sm">
+                  isCardWithLink ? 
+                  <Link href={element} key={index} pt="2" fontSize="sm">
                     {element}
-                  </Text>
+                  </Link> : 
+                   <Text key={index} pt="2" fontSize="sm">
+                   {element}
+                 </Text>
                 ))}
                 <br />
               </>
