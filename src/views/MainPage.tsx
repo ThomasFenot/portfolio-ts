@@ -25,8 +25,8 @@ const listOfProfessionalExperience: CardContent[] = [
         [
              new CardDetail(
                 [
-                    "Completion of projects in .NET Framework and .NET Core",
-                    "Execution of a Unity 3D project and 3D object modeling",
+                    "Completion of projects in .NET Framework/Core",
+                    "Development of a VR Game with Unity 3D ",
                     "Implementation of a project in Vue.js",
                     "Migration of a Razor project to React.js",
                     "Creation of APIs in .NET Core"

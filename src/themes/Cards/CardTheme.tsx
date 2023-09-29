@@ -41,9 +41,8 @@ const sizes = {
   })
 };
 
-
 // define custom variant
-  const variants = {
+const variants = {
   presentationCard: definePartsStyle({
     container: {
     }

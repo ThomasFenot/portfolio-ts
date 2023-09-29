@@ -25,7 +25,7 @@ export const DisplayCard = ({ header, content, isCardWithLink =false }: DisplayC
       <Heading size="md">{header}</Heading>
     </CardHeader>
     <CardBody>
-      <Stack divider={<StackDivider />} spacing="4">
+      <Stack divider={<StackDivider borderColor='blackAlpha.400' />} spacing="2">
         {/* Maybe there is a better way to do this... */}
         {content.map((element) => (
           <Box>
@@ -43,7 +43,7 @@ export const DisplayCard = ({ header, content, isCardWithLink =false }: DisplayC
                   <Link href={element} key={index} pt="2" fontSize="sm">
                     {element}
                   </Link> : 
-                   <Text key={index} pt="2" fontSize="sm">
+                   <Text key={index} pt="1" fontSize="xs">
                    {element}
                  </Text>
                 ))}
